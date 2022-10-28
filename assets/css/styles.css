@@ -919,13 +919,16 @@ img {
 
 .contact__information__whatsapp{
   display: flex;
+  margin-right: var(--mb-0-75);
 }
 
 .contact__information__email{
   display: flex;
+  margin-right: var(--mb-1-5);
 }
 .contact__information__linkedin{
   display: flex;
+  margin-left: var(--mb-0-5);
 }
 
 .contact__icon{
