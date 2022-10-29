@@ -572,10 +572,10 @@ img {
 .skills__php{
   width: 80%;
 }
-.skills__node{
-  width: 70%;
+.skills__mysql{
+  width: 85%;
 }
-.skills__firebase{
+.skills__laravel{
   width: 90%;
 }
 .skills__python{
