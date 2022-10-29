@@ -8,7 +8,7 @@
     /*========== Colors ==========*/
     /* Change favorite color */
     /* #6E57E0 */
-    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 230; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -503,6 +503,11 @@ img {
 .skills__icon,
 .skills__arrow{
   font-size: 2rem;
+  color: var(--first-color);
+}
+
+.skils__icon__check{
+  font-size: 1.3rem;
   color: var(--first-color);
 }
 
