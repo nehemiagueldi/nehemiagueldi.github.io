@@ -455,6 +455,11 @@ img {
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
+  transition: .3s;
+}
+
+.about__img:hover{
+  transform: scale(1.05);
 }
 
 .about__description{
@@ -991,10 +996,10 @@ img {
 .footer__title{
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
+  transition: .3s; 
 }
 
 .footer__title:hover{
-  transition: .3s;
   color: var(--first-color-lighter)
 }
 
@@ -1008,8 +1013,11 @@ img {
   row-gap: 1.5rem;
 }
 
-.footer__link:hover{
+.footer__link{
   transition: .3s;
+}
+
+.footer__link:hover{
   color: var(--first-color-lighter)
 }
 
