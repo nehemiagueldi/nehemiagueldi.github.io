@@ -129,18 +129,16 @@
             </section>
 
             <!--==================== ABOUT ====================-->
-            <section class="about section" id="about" 
-            data-aos="fade-up"
-            data-aos-duration="3000"
-            data-aos-offset="350"
-            data-aos-once="true">
-                <h2 class="section__title">About Me</h2>
-                <span class="section__subtitle">My Introduction</span>
+            <section class="about section" id="about">
+                <div data-aos="fade-up">
+                    <h2 class="section__title" >About Me</h2>
+                    <span class="section__subtitle">My Introduction</span>
+                </div>
 
                 <div class="about__container container grid">
-                    <img src="assets/img/fotoprofile.jpg" alt="" class="about__img">
+                    <img src="assets/img/fotoprofile.jpg" alt="" class="about__img" data-aos="fade-right">
 
-                    <div class="about__data">
+                    <div class="about__data" data-aos="fade-left">
                         <p class="about__description">I am a Informatics Student with a passion for creating beautiful and functional websites. I have experience in web design, development knowledge, and producing quality work. I am a person who always wants to learn new things and improve my skills. I am a fast learner and I am always willing to learn new things.</p>
 
                         <!-- <div class="about__info">
@@ -171,15 +169,14 @@
             </section>
 
             <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills" data-aos="fade-up"
-            data-aos-duration="3000"
-            data-aos-offset="350"
-            data-aos-once="true">
-                <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">Favorite Tech Stacks</span>
+            <section class="skills section" id="skills">
+                <div data-aos="fade-up">
+                    <h2 class="section__title">Skills</h2>
+                    <span class="section__subtitle">Favorite Tech Stacks</span>
+                </div>
 
                 <div class="skills__container container grid">
-                    <div>
+                    <div data-aos="fade-right">
                         <!--==================== SKILLS 1 ====================-->
                         <div class="skills__content skills__open">
                             <div class="skills__header">
@@ -300,7 +297,7 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div data-aos="fade-left">
                         <!--==================== SKILLS 3 ====================-->
                         <div class="skills__content skills__close">
                             <div class="skills__header">
@@ -799,17 +796,15 @@
             </section> -->
 
             <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact" 
-            data-aos="fade-up"
-            data-aos-duration="3000"
-            data-aos-offset="300"
-            data-aos-once="true">
-                <h2 class="section__title">Contact Me</h2>
-                <span class="section__subtitle">Get In Touch</span>
+            <section class="contact section" id="contact">
+                <div data-aos="fade-down" data-aos-offset="250">
+                    <h2 class="section__title">Contact Me</h2>
+                    <span class="section__subtitle">Get In Touch</span>
+                </div>
 
                 <div class="contact__container container grid">
                     <div class="grid__contact">
-                        <div class="contact__information contact__information__whatsapp">
+                        <div class="contact__information contact__information__whatsapp" data-aos="fade-right" data-aos-offset="250">
                             <i class="uil uil-whatsapp contact__icon"></i>
 
                             <div>
@@ -823,7 +818,7 @@
                             </div>
                         </div>
 
-                        <div class="contact__information contact__information__email">
+                        <div class="contact__information contact__information__email" data-aos="fade-up" data-aos-offset="250">
                             <i class="uil uil-envelope contact__icon"></i>
 
                             <div>
@@ -837,7 +832,7 @@
                             </div>
                         </div>
                         
-                        <div class="contact__information contact__information__linkedin">
+                        <div class="contact__information contact__information__linkedin" data-aos="fade-left" data-aos-offset="250">
                             <i class="uil uil-linkedin contact__icon"></i>
 
                             <div>
@@ -940,7 +935,11 @@
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            AOS.init();
+            AOS.init({
+                once: true,
+                offset: 350,
+                duration: 1200
+            });
         </script>
     </body>
 </html>
