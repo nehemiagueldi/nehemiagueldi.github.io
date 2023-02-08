@@ -187,3 +187,25 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== DISPLAY TIME AND DATE ====================*/
+
+function displayDate() {
+    var now = new Date();
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var date = now.toLocaleDateString('en-GB', options); 
+    // en-US, en-GB, id-ID, en-AU, en-CA, en-NZ, en-ZA, en-IN, en-PH, en-SG, en-ZW, en-MY, en-HK, en-TW, en-IE, en-BE, en-LU, en-NL, en-DE, en-AT, en-CH, en-IT, en-ES, en-PT, en-FR, en-GR, en-SE, en-NO, en-DK, en-FI, en-IS, en-TR, en-IL, en-JP, en-KR, en-CN, en-TH, en-VN, en-MX
+    document.getElementById("date").innerHTML = date;
+  }
+  
+  setInterval(displayDate, 1000);
+
+  function displayTime() {
+    var now = new Date();
+    var options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    var time = now.toLocaleTimeString('en-GB', options);
+    document.getElementById("time").innerHTML = time;
+  }
+  
+  setInterval(displayTime, 1000);
+  
