@@ -1061,6 +1061,13 @@ img {
   margin-top: var(--mb-1);
 }
 
+.footer__datetime__header{
+  /* font-size: var(--h3-font-size); */
+  font-weight: var(--font-medium);
+  text-align: center;
+  color: var(--title-color);
+}
+
 /*========== SCROLL UP ==========*/
 .scrollup {
   position: fixed;
@@ -1441,5 +1448,45 @@ img {
   .grid__contact {
     display: flex;
     justify-content: center;
+  }
+}
+
+/*==================== LOADER ====================*/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #5785e0 100%, #0000) top/9px 9px
+      no-repeat,
+    conic-gradient(#0000 20%, #5785e0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: loading 0.75s normal infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
   }
 }
