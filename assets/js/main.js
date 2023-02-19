@@ -220,3 +220,22 @@ window.addEventListener('load', () => {
         document.body.removeChild('loader');
     });
 })
+
+/*==================== Quote Of The Day ====================*/
+const quoteEl = document.querySelector(".quote");
+const authorEl = document.querySelector(".author");
+const newQuoteBtn = document.querySelector(".new-quote-btn");
+
+function generateRandomQuote() {
+fetch("https://api.quotable.io/random")
+    .then(response => response.json())
+    .then(data => {
+        quoteEl.textContent = data.content;
+        authorEl.textContent = `- ${data.author} -`;
+    })
+    .catch(error => console.log(error));
+}
+
+newQuoteBtn.addEventListener("click", generateRandomQuote);
+
+generateRandomQuote();

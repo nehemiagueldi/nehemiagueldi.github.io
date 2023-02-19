@@ -1490,3 +1490,40 @@ img {
     transform: rotate(1turn);
   }
 }
+
+/*==================== QUOTE OF THE DAY ====================*/
+.quote-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: var(--h3-font-size);
+}
+
+.author {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+}
+
+.new-quote-btn {
+  background-color: var(--first-color);
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+}
+
+.new-quote-btn:hover {
+  background-color: var(--first-color-alt);
+}
