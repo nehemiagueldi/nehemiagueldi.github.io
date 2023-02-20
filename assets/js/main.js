@@ -196,19 +196,18 @@ function displayDate() {
     var date = now.toLocaleDateString('en-GB', options); 
     // en-US, en-GB, id-ID, en-AU, en-CA, en-NZ, en-ZA, en-IN, en-PH, en-SG, en-ZW, en-MY, en-HK, en-TW, en-IE, en-BE, en-LU, en-NL, en-DE, en-AT, en-CH, en-IT, en-ES, en-PT, en-FR, en-GR, en-SE, en-NO, en-DK, en-FI, en-IS, en-TR, en-IL, en-JP, en-KR, en-CN, en-TH, en-VN, en-MX
     document.getElementById("date").innerHTML = date;
-  }
-  
-  setInterval(displayDate, 1000);
+}
 
-  function displayTime() {
+setInterval(displayDate, 1000);
+
+function displayTime() {
     var now = new Date();
     var options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
     var time = now.toLocaleTimeString('en-GB', options);
     document.getElementById("time").innerHTML = time;
-  }
-  
-  setInterval(displayTime, 1000);
-  
+}
+
+setInterval(displayTime, 1000);
 
 /*==================== SHOW LOADER ====================*/
 window.addEventListener('load', () => {
@@ -239,3 +238,44 @@ fetch("https://api.quotable.io/random")
 newQuoteBtn.addEventListener("click", generateRandomQuote);
 
 generateRandomQuote();
+
+
+/*==================== GREETINGS MESSAGES ====================*/
+async function getGreeting() {
+    try {
+        // const response = await fetch('https://api.adviceslip.com/advice');
+        // const data = await response.json();
+        const greetings = [
+            'Hello',
+            'Hi',
+            'Hey',
+            'Greetings',
+            'Salutations',
+            'Good day',
+            'Howdy',
+            'Yo',
+            'What\'s up',
+            'Welcome',
+            'Glad to see you',
+            'Great to see you',
+            'Good to see you',
+            'Thanks for coming',
+            'Nice to see you',
+            'Howdy',
+            'Hola',
+            'Bonjour',
+            'Ciao',
+            'Namaste',
+            'Salam',
+            'Aloha',
+            'Konnichiwa',
+            'Konbanwa',
+            'Selamat Datang',
+        ]; // daftar kata atau kalimat sapaan yang ingin ditampilkan
+        const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)]; // ambil kata atau kalimat sapaan secara acak dari daftar
+        const message = `${randomGreeting}👋`; // gabungkan kata atau kalimat sapaan dengan data API
+        document.getElementById('greeting-message').innerText = message; // tampilkan kata atau kalimat sapaan di elemen HTML
+    } catch (error) {
+        console.error(error);
+    }
+}

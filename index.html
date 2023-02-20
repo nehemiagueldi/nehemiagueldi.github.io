@@ -76,7 +76,7 @@
             </header>
 
             <!--==================== HOME ====================-->
-            <section class="home section" id="home" data-aos="fade-in">
+            <section class="home section" id="home">
                 <div class="home__container container grid">
                     <div class="home__content grid">
                         <div class="home__social">
@@ -110,10 +110,10 @@
                         </div>
 
                         <div class="home__data">
-                            <h1 class="home__title">Welcome to My Website</h1>
-                            <h3 class="home__subtitle">Nehemia Gueldi</h3>
+                            <h1 class="home__title__index" id="greeting-message"></h1>
+                            <h3 class="home__subtitle">~ Nehemia Gueldi ~</h3>
                             <!-- <p class="home__description"> I am a student at Multimedia Nusantara University. I am someone who is very interested in the world of informatics, especially in the field of web development (include building websites) </p> -->
-                            <a href="explore.html" class="button button--flex button__contact__home">
+                            <a href="explore.html" class="button button--flex button__index">
                                 Let's Explore
                                 <i class="uil uil-message button__icon"></i>
                             </a>
@@ -135,8 +135,7 @@
                 <div class="quote-container">
                     <p class="quote"></p>
                     <p class="author"></p>
-                    <button class="new-quote-btn">New Quote
-                    </button>
+                    <button class="new-quote-btn">New Quote</button>
                 </div>
             </section>
         </main>
@@ -151,13 +150,10 @@
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            AOS.init({
-                once: true,
-                offset: 350,
-                duration: 1200
-            });
+            window.onload = function() {
+              getGreeting(); // panggil fungsi getGreeting() saat halaman dimuat
+            }
         </script>
     </body>
 </html>

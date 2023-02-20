@@ -29,9 +29,12 @@
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
+  --medium-font-size: 1.95rem;
+  --rare-font-size: 1.75rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
+  --h4-font-size: 1rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
@@ -39,7 +42,10 @@
   /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
-
+  --font-very-bold: 700;
+  --font-hard-bold: 800;
+  --font-expert-bold: 900;
+  
   /*========== Margenes Bottom ==========*/
   /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
   --mb-0-25: 0.25rem;
@@ -334,6 +340,10 @@ img {
   font-size: var(--big-font-size);
 }
 
+.home__title__index {
+  font-size: var(--medium-font-size);
+}
+
 .home__subtitle {
   font-size: var(--h3-font-size);
   color: var(--text-color);
@@ -343,6 +353,16 @@ img {
 
 .home__description {
   margin-bottom: var(--mb-2);
+}
+
+.home__description__link {
+  color: var(--title-color);
+  font-weight: var(--font-expert-bold);
+  transition: 0.3s;
+}
+
+.home__description__link:hover {
+  text-decoration: underline;
 }
 
 .home__scroll {
@@ -435,8 +455,22 @@ img {
 }
 
 /* .button__contact__home{
-  margin-top: 0;
+  margin: 0 auto;
+  padding: 10px 20px;
 } */
+
+.button__index{
+  margin: 0 auto;
+  padding: 7px 20px;
+}
+
+.button__index .button__icon {
+  margin-bottom: 0.25rem;
+}
+
+.button__index:hover .button__icon {
+  transform: translateX(0.25rem);
+}
 
 .button__contact__home:hover .button__icon {
   transform: translateX(0.25rem);
@@ -1112,7 +1146,7 @@ img {
 }
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 567px) {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -1130,12 +1164,32 @@ img {
     grid-template-columns: 0.25fr 3fr;
   }
 
+  .home__img {
+    text-align: center;
+    margin-right: 3.2rem;
+  }
+
+  .abtimg{
+    align-items: center;
+    text-align: center;
+  }
+
   .home__blob {
     width: 180px;
   }
 
+  .home__data {
+    align-items: center;
+    text-align: center;
+  }
+
   .skills__title {
     font-size: var(--normal-font-size);
+  }
+
+  .skills__header {
+    flex-direction: row;
+    align-items: center;
   }
 
   .qualification__data {
@@ -1174,6 +1228,27 @@ img {
   .testimonial__description {
     text-align: center;
   }
+
+  .contact__container {
+    grid-template-columns: max-content;
+    justify-content: center;
+    /* grid-template-columns: repeat(3, 218px);
+    justify-content: center; */
+  }
+
+  .footer__container {
+    grid-template-columns: max-content;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* grid-template-columns: repeat(3, 218px);
+    justify-content: center; */
+  }
+
+  .footer__socials{
+    text-align: center;
+    margin-left: 1.4rem;
+  }
 }
 
 /* For medium devices */
@@ -1194,8 +1269,7 @@ img {
   .about__container,
   .skills__container,
   .portfolio__content,
-  .project__container,
-  .footer__container {
+  .project__container {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1210,6 +1284,20 @@ img {
     display: grid;
     grid-template-columns: 0.6fr;
     justify-content: center;
+  }
+
+  .footer__socials{
+    text-align: center;
+    margin-left: 1.4rem;
+  }
+
+  .footer__container {
+    grid-template-columns: max-content;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* grid-template-columns: repeat(3, 218px);
+    justify-content: center; */
   }
 }
 
@@ -1389,7 +1477,8 @@ img {
   }
 
   .footer__socials {
-    justify-self: flex-end;
+    display: flex;
+    margin-left: 1rem;
   }
 
   .footer__copy {
@@ -1448,6 +1537,11 @@ img {
   .grid__contact {
     display: flex;
     justify-content: center;
+  }
+
+  .footer__socials {
+    margin-left: 0;
+    display: flex;
   }
 }
 
@@ -1516,12 +1610,29 @@ img {
   border: none;
   color: #fff;
   font-size: 1em;
+  padding: 10px 17px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+}
+
+.share-quote-btn {
+  background-color: var(--first-color);
+  border: none;
+  color: #fff;
+  font-size: 1em;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
   font-family: var(--body-font);
   font-weight: var(--font-medium);
+}
+
+.share-quote-btn:hover {
+  background-color: var(--first-color-alt);
 }
 
 .new-quote-btn:hover {
