@@ -279,3 +279,44 @@ async function getGreeting() {
         console.error(error);
     }
 }
+
+async function getGreet() {
+    try {
+        // const response = await fetch('https://api.adviceslip.com/advice');
+        // const data = await response.json();
+        const greet = [
+            'Have a nice day',
+            'Have a great day',
+            'Have a wonderful day',
+            'Have a good day',
+            'Have a pleasant day',
+            'Have a lovely day',
+            'Have a fantastic day',
+            'Have a beautiful day',
+            'Have a blessed day',
+            'Have a marvelous day',
+            'Have a splendid day',
+            'Have a safe day',
+            'Have a fun day',
+            'Have a productive day',
+            'Have a successful day',
+            'Have a blissfully day',
+            'Have a peaceful day',
+            'Have a joyful day',
+            'Have a happy day',
+            'Have a cheerful day',
+            'Have a delightful day',
+            'Have a relaxing day',
+            'Have a fabulous day',
+            'Have a super day',
+            'Have a exciting day',
+            'Have a joyous day',
+            'Have a blissful day',
+        ]; // daftar kata atau kalimat sapaan yang ingin ditampilkan
+        const randomGreet = greet[Math.floor(Math.random() * greet.length)]; // ambil kata atau kalimat sapaan secara acak dari daftar
+        const message = `~ ${randomGreet} ~`; // gabungkan kata atau kalimat sapaan dengan data API
+        document.getElementById('greet-message').innerText = message; // tampilkan kata atau kalimat sapaan di elemen HTML
+    } catch (error) {
+        console.error(error);
+    }
+}
