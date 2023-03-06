@@ -100,6 +100,12 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
         el: ".swiper-pagination",
         clickabel: true,
     },
+    mousewheel: {
+        forceToAxis: false,
+    },
+    // autoplay: {
+    //     delay: 4000,
+    // },
 });
 
 /*==================== TESTIMONIAL ====================*/
@@ -117,8 +123,8 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
         568:{
             slidesPerView: 2,
         }
-    }
-    // mousewheel: true,
+    },
+    // mousewheel: false,
     // keyboard: true,
 });
 
