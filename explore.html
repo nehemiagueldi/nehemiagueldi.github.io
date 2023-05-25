@@ -640,7 +640,9 @@
                     <div class="swiper-wrapper">
                         <!--==================== PORTFOLIO 1 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/happywork.png" alt="" class="portfolio__img">
+                            <div class="tilt__portfolio__img">
+                                <img src="assets/img/happywork.png" alt="" class="portfolio__img">
+                            </div>
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Happy Work</h3>
@@ -674,7 +676,9 @@
 
                         <!--==================== PORTFOLIO 2 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/kotabogor.png" alt="" class="portfolio__img">
+                            <div class="tilt__portfolio__img">
+                                <img src="assets/img/kotabogor.png" alt="" class="portfolio__img">
+                            </div>
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Kota Bogor</h3>
@@ -708,7 +712,9 @@
 
                         <!--==================== PORTFOLIO 3 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/dico4.png" alt="" class="portfolio__img">
+                            <div class="tilt__portfolio__img">
+                                <img src="assets/img/dico4.png" alt="" class="portfolio__img">
+                            </div>
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">DICO-4</h3>
@@ -742,7 +748,9 @@
 
                         <!--==================== PORTFOLIO 4 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/gercepnet.png" alt="" class="portfolio__img">
+                            <div class="tilt__portfolio__img">
+                                <img src="assets/img/gercepnet.png" alt="" class="portfolio__img">
+                            </div>
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">GercepNet</h3>
@@ -776,7 +784,9 @@
 
                         <!--==================== PORTFOLIO 5 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/sneakpeek1.png" alt="" class="portfolio__img">
+                            <div class="tilt__portfolio__img">
+                                <img src="assets/img/sneakpeek1.png" alt="" class="portfolio__img">
+                            </div>
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Portfolio HTML + TailwindCSS Starterpack</h3>
@@ -1078,5 +1088,18 @@
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
+
+        <!-- VANILLA TILT JS 3D -->
+        <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".tilt__portfolio__img"), {
+                max: 35,
+                speed: 300,
+                scale: 1.07,
+                reverse: true,
+                reset: true,
+                "mouse-event-element":  1,
+            });
+        </script>
     </body>
 </html>

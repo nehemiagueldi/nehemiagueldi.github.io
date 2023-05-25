@@ -1499,12 +1499,12 @@ img {
   .portfolio__img {
     width: 320px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
-    transition: 0.3s all ease-in-out;
+    /* transition: 0.3s all ease-in-out; */
   }
 
   .portfolio__img:hover{
     cursor: pointer;
-    transform: scale(1.07);
+    /* transform: scale(1.07) */
   }
 
   .portfolio__content {
