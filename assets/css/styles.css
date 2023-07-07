@@ -1498,6 +1498,7 @@ img {
 
   .portfolio__img {
     width: 320px;
+    height: 218px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
     /* transition: 0.3s all ease-in-out; */
   }
