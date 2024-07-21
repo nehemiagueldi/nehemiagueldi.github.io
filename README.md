@@ -5,7 +5,7 @@ This is a personal website created using HTML, CSS, and JavaScript by me (Nehemi
 ## Features
 The personal website includes the following features:
 
-1. Home page: A welcome page that greets you with greetings that are always different when refreshed, can see the current day and hour, and can see random quotes.
+1. Home page: A welcome page that greets you with greetings that are always different when refreshed, can see the current day and hour, and can see random jokes.
 2. Explore page
     - Detailed page that provides more information about my background, education, work experience, and other relevant details. 
     - Lists my skills and abilities, with icons and descriptions for each one.
