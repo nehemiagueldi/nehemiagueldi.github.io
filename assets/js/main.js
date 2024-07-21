@@ -226,24 +226,24 @@ window.addEventListener('load', () => {
     });
 })
 
-/*==================== Quote Of The Day ====================*/
-const quoteEl = document.querySelector(".quote");
-const authorEl = document.querySelector(".author");
-const newQuoteBtn = document.querySelector(".new-quote-btn");
+/*==================== Jokes Of The Day ====================*/
+const setupEl = document.querySelector(".setup");
+const punchlineEl = document.querySelector(".punchline");
+const newJokesBtn = document.querySelector(".new-quote-btn");
 
-function generateRandomQuote() {
-fetch("https://api.quotable.io/random")
+function generateRandomJokes() {
+fetch("https://official-joke-api.appspot.com/jokes/random")
     .then(response => response.json())
     .then(data => {
-        quoteEl.textContent = data.content;
-        authorEl.textContent = `- ${data.author} -`;
+        setupEl.textContent = data.setup;
+        punchlineEl.textContent = `- ${data.punchline} -`;
     })
     .catch(error => console.log(error));
 }
 
-newQuoteBtn.addEventListener("click", generateRandomQuote);
+newJokesBtn.addEventListener("click", generateRandomJokes);
 
-generateRandomQuote();
+generateRandomJokes();
 
 
 /*==================== GREETINGS MESSAGES ====================*/

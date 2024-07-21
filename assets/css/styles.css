@@ -1729,6 +1729,111 @@ img {
   font-weight: var(--font-medium);
 }
 
+/*==================== JOKES OF THE DAY ====================*/
+.quote-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.new-quote-btn {
+  border: none;
+  color: #fff;
+  background-color: var(--first-color);
+  font-size: 1rem;
+  padding: 10px 17px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* animation: rainbow-animation 25s infinite alternate; */
+  transition: 0.3s;
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+}
+
+/* For small devices */
+@media screen and (max-width: 567px) {  
+  .setup {
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: var(--h4-font-size);
+    font-weight: 1000;
+    color: var(--title-color);
+    /* animation: rainbow-animation 25s infinite alternate;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); */
+    /* filter: drop-shadow(1.5px 1.5px 1.5px rgba(0, 0, 0, 0.7)); x offset, y offset, blur, warna */
+  }
+  
+  .punchline {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--title-color);
+    font-size: var(--h5-font-size);
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 568px) {
+  .setup {
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: var(--h2-font-size);
+    font-weight: 1000;
+    color: var(--title-color);
+    /* animation: rainbow-animation 25s infinite alternate;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); */
+    /* filter: drop-shadow(1.5px 1.5px 1.5px rgba(0, 0, 0, 0.7)); x offset, y offset, blur, warna */
+  }
+  
+  .punchline {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {  
+  .setup {
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: var(--h2-font-size);
+    font-weight: 1000;
+    color: var(--title-color);
+    /* animation: rainbow-animation 25s infinite alternate;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); */
+    /* filter: drop-shadow(1.5px 1.5px 1.5px rgba(0, 0, 0, 0.7)); x offset, y offset, blur, warna */
+  }
+  
+  .punchline {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+  }
+}
+
 /* RAINBOW ANIMATION */
 @keyframes rainbow-animation {
   12.5% {
